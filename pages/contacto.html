@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto Cinema</title>
+  <link rel="icon" href="../cine.png" type="image/png">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
+  <link rel="preload" href="../css/bootstrap.min.css" as="style">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <p class="titulo_banner">Cinema</p>
+    <img src="../img/banner_cinema.jpg" alt="">
+  </header>
+
+  <!-- Barra de Navegación para dispositivos móviles chicos -->
+  <nav class="navegacion-chica navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Menú</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div class="offcanvas-header flex-column">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Cinema</h5>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/cartelera.html">Cartelera</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/estrenos.html">Estrenos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+            </li>
+            <li style="height: 50px;"></li>
+            <li class="nav-item">
+              <p>Siguenos en Redes</p>
+              <div>
+                <a title="Facebook" href="#" target="_blank"><img class="icono" src="../img/facebook.svg"
+                    alt="Icono Facebook"></a>
+                <a title="Instagram" href="#" target="_blank"><img class="icono" src="../img/instagram.svg"
+                    alt="Icono Instagram"></a>
+                <a title="WhatsApp" href="#" target="_blank"><img class="icono" src="../img/whatsapp.svg"
+                    alt="Icono WhatsApp"></a>
+                <a title="Twitter" href="#" target="_blank"><img class="icono" src="../img/twitter.svg"
+                    alt="Icono Twitter"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Barra de Navegación para páginas web -->
+  <nav class="nav-bg">
+    <ul class="navegacion">
+      <li class="list-item"><a href="../index.html">Inicio</a></li>
+      <li class="list-item"><a href="/pages/cartelera.html">Cartelera</a></li>
+      <li class="list-item"><a href="/pages/estrenos.html">Estrenos</a></li>
+      <li class="list-item"><a href="/pages/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+  <div>
+    <!-- Contenido general de la página principal -->
+    <div class="titulo">
+      <h1>Contacto</h1>
+    </div>
+    
+
+  </div>
+
+  <!-- Pie de Página -->
+  <footer>
+    <div class="pie">
+      <div class="pie__redes">
+        <p>Siguenos en Redes</p>
+        <a title="Facebook" href="#" target="_blank"><img class="icono" src="../img/facebook.svg"
+            alt="Icono Facebook"></a>
+        <a title="Instagram" href="#" target="_blank"><img class="icono" src="../img/instagram.svg"
+            alt="Icono Instagram"></a>
+        <a title="WhatsApp" href="#" target="_blank"><img class="icono" src="../img/whatsapp.svg"
+            alt="Icono WhatsApp"></a>
+        <a title="Twitter" href="#" target="_blank"><img class="icono" src="../img/twitter.svg" alt="Icono Twitter"></a>
+      </div>
+      <div class="pie__derechos">
+        <p>Cinema - Todos los derechos reservados - 2023</p>
+      </div>
+      <div class="pie__domicilio">
+        <p>Calle XXXX Altura 123</p>
+        <p>Te: 1234-567890</p>
+        <p>mail@mail.com</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
