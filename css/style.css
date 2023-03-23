@@ -294,6 +294,21 @@ body {
     }
 }
 
+form {
+    margin: 8rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 2rem;
+}
+/* Modificamos el ancho del select de bootstrap */
+.form-select {
+    padding: 1rem 0.75rem;
+    margin: 1rem 0;
+}
+.invalid-feedback {
+    color: white;
+}
+
 /* Footer */
 .icono {
     width: 3rem;
