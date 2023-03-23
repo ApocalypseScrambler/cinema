@@ -308,7 +308,9 @@ form {
 .invalid-feedback {
     color: white;
 }
-
+.etiqueta {
+    font-size: small;
+}
 /* Footer */
 .icono {
     width: 3rem;
