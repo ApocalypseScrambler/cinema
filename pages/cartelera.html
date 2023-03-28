@@ -14,8 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Hoja de estilos -->
-  <link rel="preload" href="../css/bootstrap.min.css" as="style">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="preload" href="../css/style.css" as="style">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,55 +26,7 @@
     <img src="../img/banner_cinema.jpg" alt="">
   </header>
 
-  <!-- Barra de Navegación para dispositivos móviles chicos -->
-  <nav class="navegacion-chica navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Menú</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel">
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        <div class="offcanvas-header flex-column">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Cinema</h5>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/cartelera.html">Cartelera</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/pages/compras.html">Compras Online</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/contacto.html">Contacto</a>
-            </li>
-            <li style="height: 50px;"></li>
-            <li class="nav-item">
-              <p>Siguenos en Redes</p>
-              <div>
-                <a title="Facebook" href="#" target="_blank"><img class="icono" src="../img/facebook.svg"
-                    alt="Icono Facebook"></a>
-                <a title="Instagram" href="#" target="_blank"><img class="icono" src="../img/instagram.svg"
-                    alt="Icono Instagram"></a>
-                <a title="WhatsApp" href="#" target="_blank"><img class="icono" src="../img/whatsapp.svg"
-                    alt="Icono WhatsApp"></a>
-                <a title="Twitter" href="#" target="_blank"><img class="icono" src="../img/twitter.svg"
-                    alt="Icono Twitter"></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Barra de Navegación para páginas web -->
+  <!-- Barra de Navegación -->
   <nav class="nav-bg">
     <ul class="navegacion">
       <li class="list-item"><a href="../index.html">Inicio</a></li>
@@ -111,10 +61,10 @@
             <h4 class="texto_cartelera">Viernes   18hs. / 22hs.</h4>
             <h4 class="texto_cartelera">Sábado    18hs. / 22hs.</h4>
             <h4 class="texto_cartelera">Domingo   18hs. / 22hs.</h4>
-            <br>
-            <a href="https://www.youtube.com/watch?v=Q__dO3pEYDU&ab_channel=WarnerBros.PicturesLatinoam%C3%A9rica" class="btn btn-primary boton_link" target="_blank">Trailer</a>
         </div>
-        
+        <div class="trailerA">
+          <iframe src="https://www.youtube.com/embed/Q__dO3pEYDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         <h2 class="titulo salaB">Sala B</h2>
         <div class="imagenB">
             <img class="imagen_cartelera" src="../img/antman_cartelera.jpg" alt="Ant-Man and the Wasp: Quantumania">
@@ -137,10 +87,10 @@
             <h4 class="texto_cartelera">Viernes   18hs. / 22hs.</h4>
             <h4 class="texto_cartelera">Sábado    18hs. / 22hs.</h4>
             <h4 class="texto_cartelera">Domingo   18hs. / 22hs.</h4>
-            <br>
-            <a href="https://www.youtube.com/watch?v=AfXdaOd_Dxk&ab_channel=MarvelLatinoam%C3%A9ricaOficial" class="btn btn-primary boton_link" target="_blank">Trailer</a>
         </div>
-
+        <div class="trailerB">
+          <iframe src="https://www.youtube.com/embed/AfXdaOd_Dxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         <h2 class="titulo salaC">Sala C</h2>
         <div class="imagenC">
             <img class="imagen_cartelera" src="../img/thewhale_cartelera.jpg" alt="The Whale">
@@ -163,8 +113,9 @@
             <h4 class="texto_cartelera">Viernes   18hs. / 22hs.</h4>
             <h4 class="texto_cartelera">Sábado    18hs. / 22hs.</h4>
             <h4 class="texto_cartelera">Domingo   18hs. / 22hs.</h4>
-            <br>
-            <a href="https://www.youtube.com/watch?v=zrqEITtVQZ0&ab_channel=CINECONECTA" class="btn btn-primary boton_link" target="_blank">Trailer</a>
+        </div>
+        <div class="trailerC">
+          <iframe src="https://www.youtube.com/embed/zrqEITtVQZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
     
@@ -194,7 +145,6 @@
       </div>
     </div>
   </footer>
-  <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
