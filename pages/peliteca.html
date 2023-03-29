@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartelera Cinema</title>
+  <link rel="icon" href="../cine.png" type="image/png">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <p class="titulo_banner">Cinema</p>
+    <img src="../img/banner_cinema.jpg" alt="">
+  </header>
+
+  <!-- Barra de Navegación -->
+  <nav class="nav-bg">
+    <ul class="navegacion">
+      <li class="list-item"><a href="../index.html">Inicio</a></li>
+      <li class="list-item"><a href="/pages/cartelera.html">Cartelera</a></li>
+      <li class="list-item"><a href="/pages/compras.html">Compras Online</a></li>
+      <li class="list-item"><a href="/pages/peliteca.html">Peliteca</a></li>
+      <li class="list-item"><a href="/pages/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+  <div>
+    <!-- Contenido general de la página principal -->
+    <div class="main-block">
+      <h1 class="titulo">Peliteca</h1>
+      <h4 class="texto_cartelera">Aqui encontrarás tu biblioteca de películas con toda su información (solo disponible en inglés).</h4>
+      <form action="/">
+          <div class="buscador">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo">
+            <button type="button" id="buscar">Buscar</button>
+            <button type="button" id="borrar">Borrar</button>
+          </div>
+        
+      </form>
+    </div>
+    <div id="infoPelicula" class="ocultarInfoPelicula">
+      <div class="datosPelicula">
+        <p class="itemPelicula">Título Original: <span class="textoItemPelicula" id="nombrePelicula"></span></p>
+        <p class="itemPelicula">Año: <span class="textoItemPelicula" id="añoPelicula"></span></p>
+        <p class="itemPelicula">Clasificación: <span class="textoItemPelicula" id="clasificacionPelicula"></span></p>
+        <p class="itemPelicula">Fecha Lanzamiento: <span class="textoItemPelicula" id="lanzamientoPelicula"></span></p>
+        <p class="itemPelicula">Duración: <span class="textoItemPelicula" id="duracionPelicula"></span></p>
+        <p class="itemPelicula">Género: <span class="textoItemPelicula" id="generoPelicula"></span></p>
+        <p class="itemPelicula">Director: <span class="textoItemPelicula" id="directorPelicula"></span></p>
+        <p class="itemPelicula">Escritor: <span class="textoItemPelicula" id="escritorPelicula"></span></p>
+        <p class="itemPelicula">Actores: <span class="textoItemPelicula" id="actoresPelicula"></span></p>
+        <p class="itemPelicula">Sinopsis: <span class="textoItemPelicula" id="sinopsisPelicula"></span></p>
+        <p class="itemPelicula">Idioma: <span class="textoItemPelicula" id="idiomaPelicula"></span></p>
+        <p class="itemPelicula">País: <span class="textoItemPelicula" id="paisPelicula"></span></p>
+        <p class="itemPelicula">Premios: <span class="textoItemPelicula" id="premiosPelicula"></span></p>
+        <p class="itemPelicula">Puntaje: <span class="textoItemPelicula" id="puntajePelicula"></span></p>
+      </div>
+      <div>
+        <img class="posterPelicula" id="imagenPoster" src="" alt="">
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- Pie de Página -->
+  <footer>
+    <div class="pie">
+      <div class="pie__redes">
+        <p>Siguenos en Redes</p>
+        <a title="Facebook" href="#" target="_blank"><img class="icono" src="../img/facebook.svg"
+            alt="Icono Facebook"></a>
+        <a title="Instagram" href="#" target="_blank"><img class="icono" src="../img/instagram.svg"
+            alt="Icono Instagram"></a>
+        <a title="WhatsApp" href="#" target="_blank"><img class="icono" src="../img/whatsapp.svg"
+            alt="Icono WhatsApp"></a>
+        <a title="Twitter" href="#" target="_blank"><img class="icono" src="../img/twitter.svg" alt="Icono Twitter"></a>
+      </div>
+      <div class="pie__derechos">
+        <p>Cinema - Todos los derechos reservados - 2023</p>
+      </div>
+      <div class="pie__domicilio">
+        <p>Calle XXXX Altura 123</p>
+        <p>Te: 1234-567890</p>
+        <p>mail@mail.com</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/js/peliteca.js"></script>
+</body>
+
+</html>

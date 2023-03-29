@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Hoja de estilos -->
-    <link rel="preload" href="../css/bootstrap.min.css" as="style">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="preload" href="../css/style.css" as="style">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,96 +28,55 @@
         <img src="../img/banner_cinema.jpg" alt="">
     </header>
 
-    <!-- Barra de Navegación para dispositivos móviles chicos -->
-    <nav class="navegacion-chica navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Menú</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-                <div class="offcanvas-header flex-column">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Cinema</h5>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/cartelera.html">Cartelera</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/compras.html">Compras Online</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/contacto.html">Contacto</a>
-                        </li>
-                        <li style="height: 50px;"></li>
-                        <li class="nav-item">
-                            <p>Siguenos en Redes</p>
-                            <div>
-                                <a title="Facebook" href="#" target="_blank"><img class="icono"
-                                        src="../img/facebook.svg" alt="Icono Facebook"></a>
-                                <a title="Instagram" href="#" target="_blank"><img class="icono"
-                                        src="../img/instagram.svg" alt="Icono Instagram"></a>
-                                <a title="WhatsApp" href="#" target="_blank"><img class="icono"
-                                        src="../img/whatsapp.svg" alt="Icono WhatsApp"></a>
-                                <a title="Twitter" href="#" target="_blank"><img class="icono" src="../img/twitter.svg"
-                                        alt="Icono Twitter"></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Barra de Navegación para páginas web -->
+    <!-- Barra de Navegación -->
     <nav class="nav-bg">
         <ul class="navegacion">
             <li class="list-item"><a href="../index.html">Inicio</a></li>
             <li class="list-item"><a href="/pages/cartelera.html">Cartelera</a></li>
             <li class="list-item"><a href="/pages/compras.html">Compra Online</a></li>
+            <li class="list-item"><a href="/pages/peliteca.html">Peliteca</a></li>
             <li class="list-item"><a href="/pages/contacto.html">Contacto</a></li>
         </ul>
     </nav>
     <div>
         <!-- Contenido general de la página principal -->
-        <h1 class="titulo">Contacto</h1>
-        <form class="needs-validation" novalidate>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
-                <div class="invalid-feedback">Debe ingresar un Nombre</div>
-                <label class="etiqueta" for="nombre">Nombre</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
-                <div class="invalid-feedback">Debe ingresar un Apellido</div>
-                <label class="etiqueta" for="apellido">Apellido</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="mail" placeholder="name@example.com" required>
-                <div class="invalid-feedback">Debe ingresar un Mail</div>
-                <label class="etiqueta" for="mail">Mail</label>
-            </div>
-            <select class="form-select etiqueta" aria-label="Default select example">
-                <option value="consulta">Consulta</option>
-                <option value="reclamo">Reclamo/Queja</option>
-            </select>
-            <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Comentarios" id="comentarios" style="height: 10rem" required></textarea>
-                <div class="invalid-feedback">Debe ingresar un Comentario</div>
-                <label class="etiqueta" for="comentarios">Comentarios</label>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary boton_link" type="submit">Enviar</button>
-            </div>
-        </form>
+        <div class="main-block">
+            <h1 class="titulo">Contacto</h1>
+            <form action="/">
+                <div class="info">
+                    <div class="info-item">
+                        <label class="icon" for="name"><i class="fas fa-user"></i></label>
+                        <input type="text" name="name" id="name" placeholder="Nombre" required />
+                    </div>
+                    <div class="info-item">
+                        <label class="icon" for="name"><i class="fas fa-user"></i></label>
+                        <input type="text" name="name" id="name" placeholder="Apellido" required />
+                    </div>
+                    <div class="info-item">
+                        <label class="icon" for="email"><i class="fas fa-envelope"></i></label>
+                        <input type="text" name="email" id="email" placeholder="Email" required />
+                    </div>
+                    <div class="info-item">
+                        <label class="icon" for="phone"><i class="fas fa-phone"></i></label>
+                        <input type="text" name="phone" id="phone" placeholder="Teléfono" required />
+                    </div>
+                </div>
+                <div class="grade-type">
+                    <h3>Tipo de Consulta</h3>
+                    <div>
+                        <input type="radio" value="none" id="radioOne" name="grade" checked />
+                        <label for="radioOne" class="radio">Consulta</label>
+                    </div>
+                    <div>
+                        <input type="radio" value="none" id="radioTwo" name="grade" />
+                        <label for="radioTwo" class="radio">Reclamo</label>
+                    </div>
+                </div>
+                <h3>Mensaje</h3>
+                <textarea rows="8"></textarea>
+                <button type="submit" href="/">Enviar</button>
+            </form>
+        </div>
 
     </div>
 
@@ -145,7 +104,6 @@
             </div>
         </div>
     </footer>
-    <script src="../js/validaform.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
