@@ -16,6 +16,7 @@
     <!-- Hoja de estilos -->
     <link rel="preload" href="../css/style.css" as="style">
     <link rel="stylesheet" href="../css/style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-borderless@5.0.15/borderless.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -43,46 +44,6 @@
 
     </div>
 
-    <!-- <div class="container">
-        <div class="cont-products">
-            <div class="producto">
-                <h2 class="titulo">Shazam! Fury of the Gods</h2>
-                <img class="imagen_carrito" src="../img/shazam_cartelera.jpg" alt="Shazam! Fury of the Gods">
-                <h2>$500</h2>
-                <button onClick="addItem(event)" class="button" value="0" id="shazam">Add to cart</button>
-
-            </div>
-            <div class="producto">
-                <h2 class="titulo">Ant-Man and the Wasp: Quantumania</h2>
-                <img class="imagen_carrito" src="../img/antman_cartelera.jpg" alt="Ant-Man and the Wasp: Quantumania">
-                <h2>$500</h2>
-                <button onClick="addItem(event)" class="button" value="1" id="antman">Add to cart</button>
-
-            </div>
-            <div class="producto">
-                <h2 class="titulo">The Whale</h2>
-                <img class="imagen_carrito" src="../img/thewhale_cartelera.jpg" alt="The Whale">
-                <h2>$500</h2>
-                <button onClick="addItem(event)" class="button" value="2" id="thewhale">Add to cart</button>
-            </div>
-
-        </div>
-        <div class="hidden" id="precio-final">
-            <h2>Precio final:</h2>
-        </div>
-        <div id="cart" class="cont-cart">
-            <h1>Carrito de compras</h1>
-            <p id="alert" class="carrito-alert">aun no hay items en el carrito de compras</p>
-            <div id="cart-columns">
-                <ul id="cart-items"></ul>
-                <ul id="cart-prices"></ul>
-            </div>
-            <div class="total-cont">
-                <h3 id="total">TOTAL:</h3>
-            </div>
-            <button class="comprar" onClick="pressBuy()">Comprar</button>
-        </div>
-    </div> -->
     <!-- Tabla - Productos del Carrito -->
 <div class="tabla-calculo" id="tabla-calculo">
     <table class="tabla">
@@ -120,11 +81,15 @@
       <td id="total-a-pagar" class="precio-tabla border-bottom-right negrita"></td>
     </tr>
   </template>
+  <div class="botonCompra">
+    <button class="button" id="finalizarCompra">Finalizar Compra</button>
+  </div>
   
   <!-- Aqui se insertan las cards de productos con javascript-->
   <div class="contenedor-productos">
     
   </div>
+  
   
   <!-- template del producto -->
   <template id="template-prod">
@@ -146,7 +111,6 @@
      </div>
     </article>
   </template>
-
 
     <!-- Pie de Página -->
     <footer>
@@ -172,6 +136,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
     <script src="../js/compras.js"></script>
 </body>
 

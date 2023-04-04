@@ -994,9 +994,10 @@ td {
     height: 30rem;
 }
 
-
-
-
+.botonCompra {
+    display: flex;
+    justify-content: center;
+}
 
 footer {
     background-color: rgba(47, 88, 205, 1);
