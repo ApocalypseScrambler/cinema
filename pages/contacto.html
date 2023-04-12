@@ -42,15 +42,15 @@
         <!-- Contenido general de la página principal -->
         <div class="main-block">
             <h1 class="titulo">Contacto</h1>
-            <form action="/">
+            <form method='POST' action='https://formsubmit.co/luisandresreyes@hotmail.com'>
                 <div class="info">
                     <div class="info-item">
-                        <label class="icon" for="name"><i class="fas fa-user"></i></label>
-                        <input type="text" name="name" id="name" placeholder="Nombre" required />
+                        <label class="icon" for="nombre"><i class="fas fa-user"></i></label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
                     </div>
                     <div class="info-item">
-                        <label class="icon" for="name"><i class="fas fa-user"></i></label>
-                        <input type="text" name="name" id="name" placeholder="Apellido" required />
+                        <label class="icon" for="apellido"><i class="fas fa-user"></i></label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" required />
                     </div>
                     <div class="info-item">
                         <label class="icon" for="email"><i class="fas fa-envelope"></i></label>
@@ -64,16 +64,16 @@
                 <div class="grade-type">
                     <h3>Tipo de Consulta</h3>
                     <div>
-                        <input type="radio" value="none" id="radioOne" name="grade" checked />
+                        <input type="radio" value="Consulta" id="radioOne" name="grade" checked />
                         <label for="radioOne" class="radio">Consulta</label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radioTwo" name="grade" />
+                        <input type="radio" value="Reclamo" id="radioTwo" name="grade" />
                         <label for="radioTwo" class="radio">Reclamo</label>
                     </div>
                 </div>
                 <h3>Mensaje</h3>
-                <textarea rows="8"></textarea>
+                <textarea name='mensaje' id="mensaje" rows="8"></textarea>
                 <button type="submit" href="/">Enviar</button>
             </form>
         </div>
