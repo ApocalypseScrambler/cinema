@@ -26,9 +26,54 @@ a {
 }
 
 body {
-    background: rgb(47, 88, 205);
-    background: linear-gradient(180deg, rgba(47, 88, 205, 1) 0%, rgba(55, 149, 189, 1) 75%);
+    /* background: rgb(47, 88, 205);
+    background: linear-gradient(180deg, rgba(47, 88, 205, 1) 0%, rgba(55, 149, 189, 1) 75%); */
+    background-image: radial-gradient(circle farthest-corner at 12.3% 19.3%, rgba(85, 88, 218, 1) 0%, rgba(95, 209, 249, 1) 100.2%);
     font-family: 'Montserrat', sans-serif;
+}
+
+/* Icon */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?1w7k8s');
+    src: url('../fonts/icomoon.eot?1w7k8s#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?1w7k8s') format('truetype'),
+        url('../fonts/icomoon.woff?1w7k8s') format('woff'),
+        url('../fonts/icomoon.svg?1w7k8s#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up:before {
+    content: "\ea32";
+}
+
+.ir-arriba {
+    display: none;
+    padding: 20px;
+    background: rgb(47, 88, 205);
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
 }
 
 /* Header */
@@ -157,7 +202,7 @@ body {
     font-weight: 0;
     font-size: 16px;
     color: white;
-    background: linear-gradient(90deg, rgba(47, 88, 205, 1) 0%, rgba(55, 149, 189, 1) 100%);
+    background-image: radial-gradient(circle farthest-corner at 12.3% 19.3%, rgba(85, 88, 218, 1) 0%, rgba(95, 209, 249, 1) 100.2%);
     padding: 10px 45px;
     border: none;
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
@@ -170,7 +215,7 @@ body {
     transition: 327ms;
     padding: 10px 60px;
     transform: translateY(-0px);
-    background: linear-gradient(90deg, rgba(47, 88, 205, 1)0%, rgba(55, 149, 189, 1) 100%);
+    background-image: radial-gradient(circle farthest-corner at 12.3% 19.3%, rgba(85, 88, 218, 1) 0%, rgba(95, 209, 249, 1) 100.2%);
     color: white;
     border: none;
 }
@@ -189,54 +234,68 @@ body {
 }
 
 /* Carrusel */
+.contenedor_slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .slide {
     position: relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
     margin: 2rem;
     height: calc(400px + 20em);
-    border-radius: 8px;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 144rem;
 }
 
 .slide-inner {
     position: relative;
     overflow: hidden;
     width: 100%;
+    max-width: 120rem;
     height: calc(400px + 20em);
-    border-radius: 8px;
+    border-radius: 1rem;
     background-color: black;
+    width: 100%;
+    max-width: 144rem;
 }
 
 .slide-open:checked+.slide-item {
     position: static;
     opacity: 100;
     -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @-webkit-keyframes fade-in-fwd {
     0% {
-      -webkit-transform: translateZ(-80px);
-              transform: translateZ(-80px);
-      opacity: 0;
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
     }
+
     100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
     }
-  }
-  @keyframes fade-in-fwd {
+}
+
+@keyframes fade-in-fwd {
     0% {
-      -webkit-transform: translateZ(-80px);
-              transform: translateZ(-80px);
-      opacity: 0;
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
     }
+
     100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
     }
-  }
+}
 
 .slide-item {
     position: absolute;
@@ -461,7 +520,6 @@ figure:hover img {
     transform: translateY(2px);
 }
 
-
 .texto_cartelera {
     color: white;
     font-size: large;
@@ -491,14 +549,14 @@ figure:hover img {
     transition: all .3s ease;
 }
 
-.imagenA img:first-child  {
+.imagenA img:first-child {
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
-    border-radius: 4px;
+    border-radius: 1rem;
     object-fit: cover;
     width: 100%;
 }
 
-.imagenA img:last-child  {
+.imagenA img:last-child {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -510,8 +568,7 @@ figure:hover img {
 }
 
 .imagenA:hover {
-    transform: perspective(900px) rotateX(10deg)
-    translateY(-5%) translateZ(0);
+    transform: perspective(900px) rotateX(10deg) translateY(-5%) translateZ(0);
 }
 
 .imagenA::before {
@@ -520,7 +577,7 @@ figure:hover img {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,0.5) 50%, rgba(0,0,0) 95%);
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
     opacity: 0;
 }
 
@@ -528,7 +585,7 @@ figure:hover img {
     opacity: 1;
 }
 
-.imagenA:hover img:last-child  {
+.imagenA:hover img:last-child {
     opacity: 1;
     transform: translateY(0%);
 }
@@ -551,14 +608,14 @@ figure:hover img {
     transition: all .3s ease;
 }
 
-.imagenB img:first-child  {
+.imagenB img:first-child {
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
-    border-radius: 4px;
+    border-radius: 1rem;
     object-fit: cover;
     width: 100%;
 }
 
-.imagenB img:last-child  {
+.imagenB img:last-child {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -570,8 +627,7 @@ figure:hover img {
 }
 
 .imagenB:hover {
-    transform: perspective(900px) rotateX(10deg)
-    translateY(-5%) translateZ(0);
+    transform: perspective(900px) rotateX(10deg) translateY(-5%) translateZ(0);
 }
 
 .imagenB::before {
@@ -580,7 +636,7 @@ figure:hover img {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,0.5) 50%, rgba(0,0,0) 95%);
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
     opacity: 0;
 }
 
@@ -588,7 +644,7 @@ figure:hover img {
     opacity: 1;
 }
 
-.imagenB:hover img:last-child  {
+.imagenB:hover img:last-child {
     opacity: 1;
     transform: scale(1.5) translateY(-25%);
 }
@@ -611,14 +667,14 @@ figure:hover img {
     transition: all .3s ease;
 }
 
-.imagenC img:first-child  {
+.imagenC img:first-child {
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
-    border-radius: 4px;
+    border-radius: 1rem;
     object-fit: cover;
     width: 100%;
 }
 
-.imagenC img:last-child  {
+.imagenC img:last-child {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -630,8 +686,7 @@ figure:hover img {
 }
 
 .imagenC:hover {
-    transform: perspective(900px) rotateX(10deg)
-    translateY(-5%) translateZ(0);
+    transform: perspective(900px) rotateX(10deg) translateY(-5%) translateZ(0);
 }
 
 .imagenC::before {
@@ -640,7 +695,7 @@ figure:hover img {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,0.5) 50%, rgba(0,0,0) 95%);
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
     opacity: 0;
 }
 
@@ -648,7 +703,7 @@ figure:hover img {
     opacity: 1;
 }
 
-.imagenC:hover img:last-child  {
+.imagenC:hover img:last-child {
     opacity: 1;
     transform: translateY(0%);
 }
@@ -743,6 +798,7 @@ iframe {
 
 .mostrarInfoPelicula {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     gap: 5rem;
     margin: 2rem;
@@ -1012,7 +1068,7 @@ td {
 .cartola {
     height: 50rem;
     width: 30rem;
-    border-radius: 0.35rem;
+    border-radius: 1rem;
     background: #f4f4f4;
     display: flex;
     flex-direction: column;
@@ -1031,7 +1087,6 @@ td {
 
 /* Imagen */
 .contenedor-img {
-    border-radius: .35rem;
     height: 30rem;
     overflow: hidden;
 }
@@ -1137,10 +1192,12 @@ td {
         flex-direction: column;
         align-items: center;
     }
+
     .button {
         font-size: small;
         font-weight: 400;
     }
+
     td {
         font-size: small;
     }
@@ -1148,6 +1205,7 @@ td {
 
 .imagen_carrito {
     height: 30rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .botonCompra {
@@ -1176,4 +1234,3 @@ footer {
         align-items: center;
     }
 }
-

@@ -16,15 +16,21 @@
   <!-- Hoja de estilos -->
   <link rel="preload" href="../css/style.css" as="style">
   <link rel="stylesheet" href="../css/style.css">
+  <!-- JQuery -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 </head>
 
 <body>
 
   <!-- Encabezado -->
   <header class="encabezado">
-    <p class="titulo_banner">Cinema</p>
-    <img src="../img/banner_cinema.jpg" alt="">
+    <a title="logo" href="../index.html"><p class="titulo_banner">Cinema</p></a>
+    <img src="../img/banner_cinema.jpg" alt="Cinema">
   </header>
+
+  <!-- Boton hacia arriba -->
+  <span class="ir-arriba icon-arrow-up"></span>
 
   <!-- Barra de Navegación -->
   <nav class="nav-bg">
@@ -42,8 +48,8 @@
     <div class="cartelera">
         <h2 class="titulo salaA">Sala A</h2>
         <div class="imagenA">
-            <img src="../img/shazam_cartelera.jpg" alt="Shazam! Fury of the Gods">
-            <img src="../img/shazam-efecto.png" alt="Shazam! Fury of the Gods">
+            <img class="imagen_cartelera" src="../img/shazam_cartelera.jpg" alt="Shazam! Fury of the Gods">
+            <img class="imagen_cartelera" src="../img/shazam-efecto.png" alt="Shazam! Fury of the Gods">
         </div>
         <div class="textoA">
             <h3 class="titulo">Shazam! Fury of the Gods</h3>
@@ -149,6 +155,8 @@
       </div>
     </div>
   </footer>
+  
+  <script src="/js/boton.js"></script>
 </body>
 
 </html>

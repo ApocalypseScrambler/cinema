@@ -16,15 +16,20 @@
   <!-- Hoja de estilos -->
   <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
+   <!-- JQuery -->
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 
 <body>
 
   <!-- Encabezado -->
   <header class="encabezado">
-    <p class="titulo_banner">Cinema</p>
-    <img class="imagen_banner" src="img/banner_cinema.jpg" alt="">
+    <a title="logo" href="index.html"><p class="titulo_banner">Cinema</p></a>
+    <img class="imagen_banner" src="img/banner_cinema.jpg" alt="Cinema">
   </header>
+
+  <!-- Boton hacia arriba -->
+  <span class="ir-arriba icon-arrow-up"></span>
 
   <!-- Barra de Navegación -->
   <nav class="nav-bg">
@@ -42,42 +47,43 @@
 
     <!-- Carrusel -->
     <!-- Titulos en Cartelera -->
-    <div class="slide">
-      <div class="slide-inner">
-        <input class="slide-open" type="radio" id="slideCartelera-1" name="slide" aria-hidden="true" hidden=""
-          checked="checked">
-        <div class="slide-item">
-          <img src="/img/antman.jpg" alt="">
-        </div>
-        <input class="slide-open" type="radio" id="slideCartelera-2" name="slide" aria-hidden="true" hidden="">
-        <div class="slide-item">
-          <img src="/img/shazam.jpeg">
-        </div>
-        <input class="slide-open" type="radio" id="slideCartelera-3" name="slide" aria-hidden="true" hidden="">
-        <div class="slide-item">
-          <img src="/img/thewhale.jpg">
-        </div>
+    <div class="contenedor_slide">
+      <div class="slide">
+        <div class="slide-inner">
+          <input class="slide-open" type="radio" id="slideCartelera-1" name="slide" aria-hidden="true" hidden=""
+            checked="checked">
+          <div class="slide-item">
+            <img src="/img/antman.jpg" alt="">
+          </div>
+          <input class="slide-open" type="radio" id="slideCartelera-2" name="slide" aria-hidden="true" hidden="">
+          <div class="slide-item">
+            <img src="/img/shazam.jpeg">
+          </div>
+          <input class="slide-open" type="radio" id="slideCartelera-3" name="slide" aria-hidden="true" hidden="">
+          <div class="slide-item">
+            <img src="/img/thewhale.jpg">
+          </div>
 
-        <label for="slideCartelera-1" class="slide-control next control-3">›</label>
-        <label for="slideCartelera-2" class="slide-control prev control-3">‹</label>
-        <label for="slideCartelera-1" class="slide-control prev control-2">‹</label>
-        <label for="slideCartelera-3" class="slide-control next control-2">›</label>
-        <label for="slideCartelera-3" class="slide-control prev control-1">‹</label>
-        <label for="slideCartelera-2" class="slide-control next control-1">›</label>
-        <ol class="slide-indicador">
-          <li>
-            <label for="slideCartelera-1" class="slide-circulo">•</label>
-          </li>
-          <li>
-            <label for="slideCartelera-2" class="slide-circulo">•</label>
-          </li>
-          <li>
-            <label for="slideCartelera-3" class="slide-circulo">•</label>
-          </li>
-        </ol>
+          <label for="slideCartelera-1" class="slide-control next control-3">›</label>
+          <label for="slideCartelera-2" class="slide-control prev control-3">‹</label>
+          <label for="slideCartelera-1" class="slide-control prev control-2">‹</label>
+          <label for="slideCartelera-3" class="slide-control next control-2">›</label>
+          <label for="slideCartelera-3" class="slide-control prev control-1">‹</label>
+          <label for="slideCartelera-2" class="slide-control next control-1">›</label>
+          <ol class="slide-indicador">
+            <li>
+              <label for="slideCartelera-1" class="slide-circulo">•</label>
+            </li>
+            <li>
+              <label for="slideCartelera-2" class="slide-circulo">•</label>
+            </li>
+            <li>
+              <label for="slideCartelera-3" class="slide-circulo">•</label>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
-            
     <!-- Próximos Estrenos -->
     <h2 class="titulo">Próximos Estrenos</h2>
     <div class="estrenos">
@@ -135,6 +141,7 @@
     </div>
   </footer>
   <script src="/js/slide.js"></script>
+  <script src="/js/boton.js"></script>
 </body>
 
 </html>
