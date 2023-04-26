@@ -26,13 +26,9 @@ a {
 }
 
 body {
-    /* background: rgb(47, 88, 205);
-    background: linear-gradient(180deg, rgba(47, 88, 205, 1) 0%, rgba(55, 149, 189, 1) 75%); */
     background-image: radial-gradient(circle farthest-corner at 12.3% 19.3%, rgba(85, 88, 218, 1) 0%, rgba(95, 209, 249, 1) 100.2%);
     font-family: 'Montserrat', sans-serif;
 }
-
-/* Icon */
 
 @font-face {
     font-family: 'icomoon';
@@ -790,12 +786,106 @@ iframe {
 }
 
 /* Footer */
-.icono {
-    width: 3rem;
-    height: 3rem;
-    filter: invert(100%);
+.iconos_redes {
+	display: flex;
+	column-gap: 25px;
+    margin: 2rem;
+}
+.icono_red {
+	display: inline-flex;
+	width: 35px;
+	height: 35px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 50%;
+	outline: 2px solid #fff;
+	transition-property: outline-offset, outline-color, background-color;
+	transition-duration: 0.25s;
+}
+@media (max-width: 768px) {
+    .icono_red {
+        width: 40px;
+	    height: 40px;
+        font-size: 25px;
+    }
 }
 
+.icono_red:hover {
+	outline-offset: 4px;
+}
+.icono_red i {
+	margin: auto;
+}
+.icono_red:hover i {
+	animation: shake 0.25s;
+}
+.icono--instagram:hover {
+	background-image: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	outline-color: #a02d76;
+}
+.icono--twitter:hover {
+	background-color: #1da1f2;
+	outline-color: #1da1f2;
+}
+.icono--facebook:hover {
+	background-color: #0077b5;
+	outline-color: #0077b5;
+}
+.icono--whatsapp:hover {
+	background-color: #2ea44f;
+	outline-color: #2ea44f;
+}
+@keyframes shake {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(-15deg);
+	}
+}
+
+footer {
+    background-color: rgba(47, 88, 205, 1);
+}
+
+.pie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.3rem;
+    margin: 5rem 1rem 0rem 1rem;
+}
+
+/* Responsive del footer */
+@media (max-width: 768px) {
+    .pie {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.pie__redes, .pie__derechos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Peliteca */
 .mostrarInfoPelicula {
     display: flex;
     justify-content: space-between;
@@ -1213,24 +1303,3 @@ td {
     justify-content: center;
 }
 
-footer {
-    background-color: rgba(47, 88, 205, 1);
-    ;
-}
-
-.pie {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: white;
-    font-size: 1.3rem;
-    margin: 5rem 1rem 0rem 1rem;
-}
-
-/* Responsive del footer */
-@media (max-width: 576px) {
-    .pie {
-        flex-direction: column;
-        align-items: center;
-    }
-}
