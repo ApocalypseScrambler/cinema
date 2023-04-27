@@ -1,4 +1,5 @@
 const infoPelicula = document.getElementById('infoPelicula');
+const peliculaNoEncontrada = document.getElementById('peliculaNoEncontrada');
 
 document.getElementById('borrar').onclick = function () {
 
@@ -13,9 +14,16 @@ document.getElementById('buscar').onclick = function () {
     const poster = document.getElementById('imagenPoster');
 
     const endPoint = 'https://www.omdbapi.com/?t=' + titulo + '&plot=full&apikey=9c761bf0';
-
+    
     axios.get(endPoint)
         .then(response => {
+            if (response.data.Response == 'False') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Película no encontrada',
+                    text: 'No se ha encontrada ningún título de película. Por favor reintente.',
+                });
+            } else {
             infoPelicula.classList.add('mostrarInfoPelicula');
             infoPelicula.classList.remove('ocultarInfoPelicula');
             document.getElementById('nombrePelicula').textContent = response.data.Title
@@ -32,7 +40,7 @@ document.getElementById('buscar').onclick = function () {
             document.getElementById('paisPelicula').textContent = response.data.Country
             document.getElementById('premiosPelicula').textContent = response.data.Awards
             document.getElementById('puntajePelicula').textContent = response.data.imdbRating
-            poster.src = response.data.Poster;
+            poster.src = response.data.Poster;}
         }, error => {
             console.log(error);
         });
