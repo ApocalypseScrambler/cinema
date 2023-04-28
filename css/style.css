@@ -70,6 +70,7 @@ body {
     position: fixed;
     top: 2rem;
     right: 2rem;
+    z-index: 1;
 }
 
 /* Header */
@@ -788,7 +789,7 @@ iframe {
 .iconos_redes {
 	display: flex;
 	column-gap: 25px;
-    margin: 2rem;
+    margin: 1.5rem 0;
 }
 .icono_red {
 	display: inline-flex;
@@ -870,18 +871,30 @@ footer {
     margin: 5rem 1rem 0rem 1rem;
 }
 
+.pie__redes, .pie__derechos, .pie__domicilio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    flex-basis: 33%;   
+}
+
+.pie__domicilio  {
+    align-items: flex-end;
+}
+
+.pie__redes  {
+    align-items: flex-start;
+}
+
 /* Responsive del footer */
 @media (max-width: 768px) {
     .pie {
         flex-direction: column;
         align-items: center;
     }
-}
-
-.pie__redes, .pie__derechos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .pie__domicilio, .pie__redes {
+        align-items: center;
+    }
 }
 
 /* Peliteca */

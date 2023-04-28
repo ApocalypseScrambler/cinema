@@ -50,39 +50,40 @@
         <!-- Contenido general de la página principal -->
         <div class="main-block">
             <h1 class="titulo">Contacto</h1>
-            <form method='POST' action='https://formsubmit.co/luisandresreyes@hotmail.com'>
+            <form method='POST' action='https://formsubmit.co/luisandresreyes@hotmail.com' name="formulario">
                 <div class="info">
                     <div class="info-item">
                         <label class="icon" for="nombre"><i class="fas fa-user"></i></label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre"  />
                     </div>
                     <div class="info-item">
                         <label class="icon" for="apellido"><i class="fas fa-user"></i></label>
-                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" required />
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" />
                     </div>
                     <div class="info-item">
                         <label class="icon" for="email"><i class="fas fa-envelope"></i></label>
-                        <input type="text" name="email" id="email" placeholder="Email" required />
+                        <input type="text" name="email" id="email" placeholder="Email" />
                     </div>
                     <div class="info-item">
                         <label class="icon" for="phone"><i class="fas fa-phone"></i></label>
-                        <input type="text" name="phone" id="phone" placeholder="Teléfono" required />
+                        <input type="text" name="phone" id="phone" placeholder="Teléfono" minlength="1" />
                     </div>
                 </div>
                 <div class="grade-type">
                     <h3>Tipo de Consulta</h3>
                     <div>
-                        <input type="radio" value="Consulta" id="radioOne" name="grade" checked />
-                        <label for="radioOne" class="radio">Consulta</label>
+                        <input type="radio" value="Consulta" id="radio1" name="grade" checked />
+                        <label for="radio1" class="radio">Consulta</label>
                     </div>
                     <div>
-                        <input type="radio" value="Reclamo" id="radioTwo" name="grade" />
-                        <label for="radioTwo" class="radio">Reclamo</label>
+                        <input type="radio" value="Reclamo" id="radio2" name="grade" />
+                        <label for="radio2" class="radio">Reclamo</label>
                     </div>
                 </div>
                 <h3>Mensaje</h3>
-                <textarea name='mensaje' id="mensaje" rows="8"></textarea>
-                <button type="submit" href="/">Enviar</button>
+                <textarea name='mensaje' id="mensaje" rows="8" maxlength="400"></textarea>
+                <!-- <button type="submit" href="/">Enviar</button> -->
+                <input type="button" id="botonEnviar" value="Enviar" class="button" onclick="enviarFormulario()"/>
             </form>
         </div>
 
@@ -119,6 +120,8 @@
           </div>
         </div>
       </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <script src="../js/formulario.js"></script>
     <script src="../js/boton.js"></script>
 </body>
 
