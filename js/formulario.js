@@ -1,7 +1,7 @@
 var error = [];
 
 function validar() {
-    
+
     error = [];
 
     let nombre = document.getElementById("nombre").value;
@@ -14,35 +14,35 @@ function validar() {
     const ExpRegNumeros = new RegExp('^[0-9]+$');
     const ExpRegLetrasNumerosEspacios = new RegExp('^[ A-ZÑÁÉÍÓÚ0-9]+$', 'i');
     const ExpRegEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    
-    if( nombre == null || nombre.length == 0 || ExpRegLetras.test(nombre) == false ) {
+
+    if (nombre == null || nombre.length == 0 || ExpRegLetras.test(nombre) == false) {
         error.push('nombre');
     }
 
-    if( apellido == null || apellido.length == 0 || ExpRegLetras.test(apellido) == false ) {
+    if (apellido == null || apellido.length == 0 || ExpRegLetras.test(apellido) == false) {
         error.push('apellido');
     }
 
-    if( email == null || email.length == 0 || ExpRegEmail.test(email) == false ) {
+    if (email == null || email.length == 0 || ExpRegEmail.test(email) == false) {
         error.push('email');
     }
 
-    if( phone == null || phone.length == 0 || ExpRegNumeros.test(phone) == false ) {
+    if (phone == null || phone.length == 0 || ExpRegNumeros.test(phone) == false) {
         error.push('phone');
     }
 
-    if( mensaje == null || mensaje.length == 0 || ExpRegLetrasNumerosEspacios.test(mensaje) == false ) {
+    if (mensaje == null || mensaje.length == 0 || ExpRegLetrasNumerosEspacios.test(mensaje) == false) {
         error.push('mensaje');
     }
 }
 
 function enviarFormulario() {
-    debugger;
+    
     let texto = '';
 
     validar();
 
-    if ( error.length == 0 ) {
+    if (error.length == 0) {
         alert("Formulario enviado correctamente, gracias.");
         document.formulario.submit();
     } else {

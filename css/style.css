@@ -1037,18 +1037,24 @@ textarea {
     margin-bottom: 1.5rem;
 }
 
-button {
+button, .botonContacto {
     padding: 8px;
     border-radius: 8px;
     border: none;
-    background: rgba(0, 162, 255, 0.5);
+    background: rgba(47, 88, 205, 1);
     font-size: medium;
     font-weight: 700;
     color: #fff;
+    cursor: pointer;
+    margin: 0 .4rem;
 }
 
-button:hover {
+button:hover, .botonContacto:hover {
     background: rgba(0, 162, 255, 0.8);
+}
+
+.botonContacto {
+    width: 15rem;
 }
 
 .grade-type div {
@@ -1148,13 +1154,7 @@ td {
     padding-right: 0.4rem;
 }
 
-.button {
-    margin: 0 .4rem;
-    border: var(--border-table);
-    background: rgba(47, 88, 205, 1);
-    color: white;
-    cursor: pointer;
-}
+
 
 .negrita {
     font-weight: bold;
