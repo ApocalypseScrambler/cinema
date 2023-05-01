@@ -529,61 +529,94 @@ figure:hover img {
 .cartelera {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: 0.1fr 1fr 1fr 0.1fr 1fr 1fr 0.1fr 1fr 1fr; */
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     margin: 0 2rem;
+}
+
+
+.wrapper {
+    margin: 2rem auto;
+    height: 85rem;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    perspective: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 992px) {
+    .wrapper {
+        height: 95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        height: 60rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        height: 50rem;
+    }
+}
+
+.column {
+    position: relative;
+    flex: 1 1 auto;
+    overflow: hidden;
+    transition: transform 1200ms ease-in-out;
+    backface-visibility: hidden;
+}
+
+.wrapper:hover .column {
+    transform: rotateY(180deg);
+}
+
+.inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.column:nth-child(1) .inner {
+    transform: translateX(0%);
+}
+
+.column:nth-child(2) .inner {
+    transform: translateX(-20%);
+}
+
+.column:nth-child(3) .inner {
+    transform: translateX(-40%);
+}
+
+.column:nth-child(4) .inner {
+    transform: translateX(-60%);
+}
+
+.column:nth-child(5) .inner {
+    transform: translateX(-80%);
 }
 
 .salaA {
     grid-area: 1 / 1 / 2 / 3;
 }
 
-.imagenA {
-    grid-area: 2 / 1 / 3 / 2;
-    position: relative;
-    transition: all .3s ease;
+.wrapperA {
+    background-image: url(../img/shazam_cartelera.jpg);
 }
 
-.imagenA img:first-child {
-    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
-    border-radius: 1rem;
-    object-fit: cover;
-    width: 100%;
-}
-
-.imagenA img:last-child {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(25%);
-    transition: .3s ease;
-    opacity: 0;
-}
-
-.imagenA:hover {
-    transform: perspective(900px) rotateX(10deg) translateY(-5%) translateZ(0);
-}
-
-.imagenA::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
-    opacity: 0;
-}
-
-.imagenA:hover::before {
-    opacity: 1;
-}
-
-.imagenA:hover img:last-child {
-    opacity: 1;
-    transform: translateY(0%);
+.innerA {
+    background-image: url(../img/shazam_cartelera2.jpg);
 }
 
 .textoA {
@@ -598,51 +631,12 @@ figure:hover img {
     grid-area: 4 / 1 / 5 / 3;
 }
 
-.imagenB {
-    grid-area: 5 / 1 / 6 / 2;
-    position: relative;
-    transition: all .3s ease;
+.wrapperB {
+    background-image: url(../img/antman_cartelera.jpg);
 }
 
-.imagenB img:first-child {
-    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
-    border-radius: 1rem;
-    object-fit: cover;
-    width: 100%;
-}
-
-.imagenB img:last-child {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(25%);
-    transition: .3s ease;
-    opacity: 0;
-}
-
-.imagenB:hover {
-    transform: perspective(900px) rotateX(10deg) translateY(-5%) translateZ(0);
-}
-
-.imagenB::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
-    opacity: 0;
-}
-
-.imagenB:hover::before {
-    opacity: 1;
-}
-
-.imagenB:hover img:last-child {
-    opacity: 1;
-    transform: scale(1.5) translateY(-25%);
+.innerB {
+    background-image: url(../img/antman_cartelera2.jpeg);
 }
 
 .textoB {
@@ -657,51 +651,12 @@ figure:hover img {
     grid-area: 7 / 1 / 8 / 3;
 }
 
-.imagenC {
-    grid-area: 8 / 1 / 9 / 2;
-    position: relative;
-    transition: all .3s ease;
+.wrapperC {
+    background-image: url(../img/thewhale_cartelera.jpg);
 }
 
-.imagenC img:first-child {
-    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
-    border-radius: 1rem;
-    object-fit: cover;
-    width: 100%;
-}
-
-.imagenC img:last-child {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(25%);
-    transition: .3s ease;
-    opacity: 0;
-}
-
-.imagenC:hover {
-    transform: perspective(900px) rotateX(10deg) translateY(-5%) translateZ(0);
-}
-
-.imagenC::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
-    opacity: 0;
-}
-
-.imagenC:hover::before {
-    opacity: 1;
-}
-
-.imagenC:hover img:last-child {
-    opacity: 1;
-    transform: translateY(0%);
+.innerC {
+    background-image: url(../img/thewhale_cartelera2.jpg);
 }
 
 .textoC {
@@ -767,95 +722,91 @@ iframe {
     }
 }
 
-/* form {
-    margin: 8rem;
-    border: 1px solid white;
-    border-radius: 8px;
-    padding: 2rem;
-}
-
-.form-select {
-    padding: 1rem 0.75rem;
-    margin: 1rem 0;
-}
-.invalid-feedback {
-    color: white;
-} */
 .etiqueta {
     font-size: small;
 }
 
 /* Footer */
 .iconos_redes {
-	display: flex;
-	column-gap: 25px;
+    display: flex;
+    column-gap: 25px;
     margin: 1.5rem 0;
 }
+
 .icono_red {
-	display: inline-flex;
-	width: 35px;
-	height: 35px;
-	text-decoration: none;
-	font-size: 20px;
-	color: #fff;
-	border-radius: 50%;
-	outline: 2px solid #fff;
-	transition-property: outline-offset, outline-color, background-color;
-	transition-duration: 0.25s;
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
 }
+
 @media (max-width: 768px) {
     .icono_red {
         width: 40px;
-	    height: 40px;
+        height: 40px;
         font-size: 25px;
     }
 }
 
 .icono_red:hover {
-	outline-offset: 4px;
+    outline-offset: 4px;
 }
+
 .icono_red i {
-	margin: auto;
+    margin: auto;
 }
+
 .icono_red:hover i {
-	animation: shake 0.25s;
+    animation: shake 0.25s;
 }
+
 .icono--instagram:hover {
-	background-image: radial-gradient(
-		circle at 30% 107%,
-		#fdf497 0%,
-		#fdf497 5%,
-		#fd5949 45%,
-		#d6249f 60%,
-		#285aeb 90%
-	);
-	outline-color: #a02d76;
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%);
+    outline-color: #a02d76;
 }
+
 .icono--twitter:hover {
-	background-color: #1da1f2;
-	outline-color: #1da1f2;
+    background-color: #1da1f2;
+    outline-color: #1da1f2;
 }
+
 .icono--facebook:hover {
-	background-color: #0077b5;
-	outline-color: #0077b5;
+    background-color: #0077b5;
+    outline-color: #0077b5;
 }
+
 .icono--whatsapp:hover {
-	background-color: #2ea44f;
-	outline-color: #2ea44f;
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
 }
+
 @keyframes shake {
-	10% {
-		transform: rotate(15deg);
-	}
-	20% {
-		transform: rotate(-15deg);
-	}
-	30% {
-		transform: rotate(15deg);
-	}
-	40% {
-		transform: rotate(-15deg);
-	}
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
 }
 
 footer {
@@ -871,18 +822,20 @@ footer {
     margin: 5rem 1rem 0rem 1rem;
 }
 
-.pie__redes, .pie__derechos, .pie__domicilio {
+.pie__redes,
+.pie__derechos,
+.pie__domicilio {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    flex-basis: 33%;   
+    align-items: center;
+    flex-basis: 33%;
 }
 
-.pie__domicilio  {
+.pie__domicilio {
     align-items: flex-end;
 }
 
-.pie__redes  {
+.pie__redes {
     align-items: flex-start;
 }
 
@@ -892,7 +845,9 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    .pie__domicilio, .pie__redes {
+
+    .pie__domicilio,
+    .pie__redes {
         align-items: center;
     }
 }
@@ -1037,7 +992,8 @@ textarea {
     margin-bottom: 1.5rem;
 }
 
-button, .botonContacto {
+button,
+.botonContacto {
     padding: 8px;
     border-radius: 8px;
     border: none;
@@ -1049,7 +1005,8 @@ button, .botonContacto {
     margin: 0 .4rem;
 }
 
-button:hover, .botonContacto:hover {
+button:hover,
+.botonContacto:hover {
     background: rgba(0, 162, 255, 0.8);
 }
 
@@ -1314,4 +1271,3 @@ td {
     display: flex;
     justify-content: center;
 }
-
