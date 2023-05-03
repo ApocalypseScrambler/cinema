@@ -18,7 +18,9 @@ body {
 }
 
 img {
+    object-fit: cover;
     width: 100%;
+    height: 100%;
 }
 
 a {
@@ -26,8 +28,37 @@ a {
 }
 
 body {
-    background-image: radial-gradient(circle farthest-corner at 12.3% 19.3%, rgba(85, 88, 218, 1) 0%, rgba(95, 209, 249, 1) 100.2%);
+    -webkit-animation: color-change-3x 5s linear infinite alternate both;
+    animation: color-change-3x 5s linear infinite alternate both;
     font-family: 'Montserrat', sans-serif;
+}
+
+@-webkit-keyframes color-change-3x {
+    0% {
+        background: #363ACE;
+    }
+
+    50% {
+        background: #777AE6;
+    }
+
+    100% {
+        background: #A3A5F1;
+    }
+}
+
+@keyframes color-change-3x {
+    0% {
+        background: #363ACE;
+    }
+
+    50% {
+        background: #777AE6;
+    }
+
+    100% {
+        background: #A3A5F1;
+    }
 }
 
 @font-face {
@@ -419,11 +450,6 @@ body {
 .estrenos {
     display: flex;
     justify-content: space-around;
-}
-
-.estrenos {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -529,26 +555,35 @@ figure:hover img {
 .cartelera {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 3fr 3fr 0.2fr 3fr 3fr 0.2fr 3fr 3fr;
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
-    margin: 0 2rem;
+    margin: 0 auto;
+    max-width: 140rem;
 }
 
+@media (max-width: 1500px) {
+    .cartelera {
+        margin: 0 2rem;
+    }
+}
 
 .wrapper {
     margin: 2rem auto;
-    height: 85rem;
+    height: 100vh;
     object-fit: cover;
     object-position: center;
     display: flex;
     perspective: 500px;
     background-position: center;
     background-size: cover;
+    border-radius: 1rem;
 }
 
 @media (max-width: 992px) {
     .wrapper {
-        height: 95rem;
+        height: 90rem;
+        width: 90vw;
     }
 }
 
@@ -558,7 +593,7 @@ figure:hover img {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 578px) {
     .wrapper {
         height: 50rem;
     }
@@ -582,7 +617,7 @@ figure:hover img {
     left: 0;
     width: 500%;
     height: 100%;
-
+    border-radius: 1rem;
     background-position: center;
     background-size: cover;
 }
@@ -619,6 +654,10 @@ figure:hover img {
     background-image: url(../img/shazam_cartelera2.jpg);
 }
 
+.imagenA { 
+    grid-area: 2 / 1 / 3 / 2; 
+}
+
 .textoA {
     grid-area: 2 / 2 / 3 / 3;
 }
@@ -639,6 +678,10 @@ figure:hover img {
     background-image: url(../img/antman_cartelera2.jpeg);
 }
 
+.imagenB {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
 .textoB {
     grid-area: 5 / 2 / 6 / 3;
 }
@@ -657,6 +700,10 @@ figure:hover img {
 
 .innerC {
     background-image: url(../img/thewhale_cartelera2.jpg);
+}
+
+.imagenC {
+    grid-area: 8 / 1 / 9 / 2;
 }
 
 .textoC {
@@ -687,6 +734,7 @@ figure:hover img {
 iframe {
     width: 90vw;
     height: 90vh;
+    border-radius: 1rem;
 }
 
 @media (max-width: 1200px) {
