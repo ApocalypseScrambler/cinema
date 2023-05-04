@@ -2,7 +2,7 @@ const infoPelicula = document.getElementById('infoPelicula');
 const peliculaNoEncontrada = document.getElementById('peliculaNoEncontrada');
 
 document.getElementById('borrar').onclick = function () {
-
+    //Agregamos la clase para ocultar el contenido del detalle de cada pelicula
     infoPelicula.classList.remove('mostrarInfoPelicula');
     infoPelicula.classList.add('ocultarInfoPelicula');
 
@@ -17,6 +17,7 @@ document.getElementById('buscar').onclick = function () {
     
     axios.get(endPoint)
         .then(response => {
+            // Si response = false la busqueda no tiene resultados
             if (response.data.Response == 'False') {
                 Swal.fire({
                     icon: 'error',

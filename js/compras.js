@@ -97,10 +97,10 @@ const pintarFooter = () => {
             pintarFooter()
         })
 
-        //Botones aumentar y disminuir cantidades
-
     }
 }
+//Botones aumentar y disminuir cantidades
+
 tbodyCarrito.addEventListener('click', e => {
 
     if (e.target.classList.contains('button')) {
@@ -133,6 +133,7 @@ const aumentarDisminuir = boton => {
 
 const finalizarCompra = document.querySelector('#finalizarCompra')
 
+// Simulamos el envio de un mail con la compra
 async function Enviomail() {
     const { value: email } = await Swal.fire({
         icon: 'warning',

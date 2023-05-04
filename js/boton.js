@@ -1,6 +1,7 @@
+//Hacia arriba
 $(document).ready(function () {
     irArriba();
-  }); //Hacia arriba
+  }); 
   
   function irArriba() {
     $(".ir-arriba").click(function () {

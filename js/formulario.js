@@ -9,12 +9,14 @@ function validar() {
     let email = document.getElementById("email").value;
     let phone = document.getElementById("phone").value;
     let mensaje = document.getElementById("mensaje").value;
-
+    
+    //Expresiones regulares
     const ExpRegLetras = new RegExp('^[A-ZÑÁÉÍÓÚ]+$', 'i');
     const ExpRegNumeros = new RegExp('^[0-9]+$');
     const ExpRegLetrasNumerosEspacios = new RegExp('^[ A-ZÑÁÉÍÓÚ0-9]+$', 'i');
     const ExpRegEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
+    // Agregamos con push al array "error" los distintos errores que surgen del control
     if (nombre == null || nombre.length == 0 || ExpRegLetras.test(nombre) == false) {
         error.push('nombre');
     }
